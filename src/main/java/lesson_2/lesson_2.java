@@ -93,7 +93,7 @@ public class lesson_2 {
         int[] array = new int[100];
         for (int i = 0; i < 100; i++) {
             array[i] = i + 1;
-            System.out.println(array[i]);
+            System.out.print(array[i]);
         }
     }
 
@@ -149,6 +149,7 @@ public class lesson_2 {
         varArray();
         System.out.println();
         largeArray();
+        System.out.println();
         System.out.println();
         doubleSixArray();
         System.out.println();
