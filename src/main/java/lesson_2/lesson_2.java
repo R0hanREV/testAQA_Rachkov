@@ -52,9 +52,78 @@ public class lesson_2 {
             System.out.println("Число " + a + " отрицательное");
         }
     }
+
     public static boolean estNum(int a) {
-        boolean i = a >=0;
+        boolean i = a >= 0;
         return i;
+    }
+
+    public static void printWord(String a, int b) {
+        for (int i = 0; i < b; i++) {
+            System.out.println(a);
+        }
+    }
+
+    public static boolean leapYear(int year) {
+        if (year % 400 == 0) {
+            return true;
+        } else if (year % 100 == 0) {
+            return false;
+        } else if (year % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void varArray() {
+        int[] array = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        for (int i = 0; i < 10; i++) {
+            if (array[i] == 0) {
+                array[i] = 1;
+                System.out.println(array[i]);
+            } else {
+                array[i] = 0;
+                System.out.println(array[i]);
+            }
+        }
+    }
+
+    public static void largeArray() {
+        int[] array = new int[100];
+        for (int i = 0; i < 100; i++) {
+            array[i] = i + 1;
+            System.out.println(array[i]);
+        }
+    }
+
+    public static void doubleSixArray() {
+        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < 12; i++) {
+            if (array[i] < 6) {
+                array[i] *= 2;
+            }
+            System.out.print(array[i]);
+        }
+    }
+
+    public static void crossArray() {
+        int[][] array = new int[5][5];
+        for (int i = 0; i < 5; i++) {
+            array[i][i] = 1;
+            for (int j = 0; j < 5; j++) {
+                System.out.print(array[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void manualArray(int len, int initialValue) {
+        int[] array = new int[len];
+        for (int i = 0; i < len; i++) {
+            array[i] = initialValue;
+            System.out.print(array[i]);
+        }
     }
 
 
@@ -72,6 +141,21 @@ public class lesson_2 {
         estimationNum(4);
         System.out.println();
         System.out.println(estNum(4));
+        System.out.println();
+        printWord("Слово", 3);
+        System.out.println();
+        System.out.println(leapYear(80));
+        System.out.println();
+        varArray();
+        System.out.println();
+        largeArray();
+        System.out.println();
+        doubleSixArray();
+        System.out.println();
+        System.out.println();
+        crossArray();
+        System.out.println();
+        manualArray(3, 7);
 
 
     }
