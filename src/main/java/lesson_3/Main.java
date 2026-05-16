@@ -11,7 +11,7 @@ public class Main {
         shoppingCart[2] = new Goods("Ham", "06.02.2026", "Myasnaya Lavka", "RU", 356.00, true);
         shoppingCart[3] = new Goods("Potato", "12.07.2025", "Ogorod", "RU", 36.00, false);
         shoppingCart[4] = new Goods("Cheese", "17.09.2023", "SHEProd", "SWISS", 436.00, true);
-     //   System.out.println(Arrays.toString(shoppingCart));
+       System.out.println(Arrays.toString(shoppingCart));
         Park park1 = new Park("Veselie", "Rostov, naberegnaya street");
         Park.Attraction attraction = new Park("Veselie", "Rostov, naberegnaya street").new Attraction("Karusel","15:00 - 21:00",35.5);
         park1.setAttraction(attraction);
