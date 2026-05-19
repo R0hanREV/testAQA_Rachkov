@@ -16,8 +16,17 @@ public class Bowl {
         this.amountOfFood = amountOfFood;
     }
 
-    public void addFood (int food) {
-       amountOfFood += food;
+    public int addFood(int food) {
+        if (amountOfFood < 0) {
+            amountOfFood = 0;
+        }
+        return amountOfFood += food;
     }
 
+    public int decreaseFood(int food) {
+        if (amountOfFood < 0) {
+            amountOfFood = 0;
+        }
+        return amountOfFood -= food;
+    }
 }
