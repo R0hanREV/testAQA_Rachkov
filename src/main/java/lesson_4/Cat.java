@@ -16,14 +16,18 @@ public class Cat extends Animal {
     }
 
     public void eat(Bowl bowl, int foodAmount) {
-        if (isHungry == false){
-            System.out.println(name+ " уже сыт.");
+        if (isHungry == false) {
+            System.out.println(name + " уже сыт.");
         }
-        if (bowl.decreaseFood(foodAmount) >= foodAmount){
+        if (bowl.decreaseFood(foodAmount) >= foodAmount) {
             isHungry = false;
-            System.out.println(name + " поел "+ foodAmount + " еды.");
+            System.out.println(name + " поел " + foodAmount + " еды.");
         } else {
             System.out.println("В миске не хватает еды");
         }
+        System.out.println(name + " голоден: " + isHungry);
     }
+    //   public void infoCat (){
+    //       System.out.println(isHungry);
+    //   }
 }
