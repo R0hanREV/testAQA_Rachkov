@@ -11,20 +11,25 @@ public class Animal {
         this.runDistance = runDistance;
         this.swimDistance = swimDistance;
         amountAnimals++;
+        infoAnimals();
     }
 
     public void run(int distance) {
         if (runDistance <= distance) {
             System.out.println(name + " пробежал " + distance + " метров.");
         }
-        System.out.println(name + " не смог добежать"+ distance+ " метров.");
+        System.out.println(name + " не смог добежать " + distance + " метров.");
 
     }
 
-    public void swim(int distance) {
+    void swim(int distance) {
         if (swimDistance <= distance) {
             System.out.println(name + " проплыл " + distance + " метров.");
         }
         System.out.println(name + " не смог проплыть" + " метров.");
+    }
+
+    public void infoAnimals() {
+        System.out.println("Количество животных " + amountAnimals);
     }
 }
