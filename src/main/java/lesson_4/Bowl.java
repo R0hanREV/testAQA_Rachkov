@@ -4,7 +4,7 @@ public class Bowl {
     private int amountOfFood;
 
 
-    public Bowl(int amountOfFood) {
+    public Bowl() {
         this.amountOfFood = amountOfFood;
     }
 
@@ -16,17 +16,18 @@ public class Bowl {
         this.amountOfFood = amountOfFood;
     }
 
-    public int addFood(int food) {
+    public void addFood(int food) {
         if (amountOfFood < 0) {
             amountOfFood = 0;
         }
-        return amountOfFood += food;
+        setAmountOfFood(amountOfFood += food);
     }
 
-    public int decreaseFood(int food) {
-        if (amountOfFood < 0) {
-            amountOfFood = 0;
+    public void decreaseFood(int food) {
+        if (food <= amountOfFood) {
+            setAmountOfFood(amountOfFood -= food);
+        } else {
+            System.out.println("В миске недостаточно еды");
         }
-        return amountOfFood -= food;
     }
 }

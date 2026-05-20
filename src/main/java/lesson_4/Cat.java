@@ -19,9 +19,10 @@ public class Cat extends Animal {
         if (isHungry == false) {
             System.out.println(name + " уже сыт.");
         }
-        if (bowl.decreaseFood(foodAmount) >= foodAmount) {
+        if (bowl.getAmountOfFood() >= foodAmount) {
             isHungry = false;
             System.out.println(name + " поел " + foodAmount + " еды.");
+            bowl.decreaseFood(foodAmount);
         } else {
             System.out.println("В миске не хватает еды");
         }
