@@ -14,7 +14,7 @@ public class Main {
         for (Cat i : cat1) {
             i.eat(bowl1, 20);
         }
-        System.out.println(bowl1.getAmountOfFood());
+        System.out.println("В миске осталось " + bowl1.getAmountOfFood() + " еды.");
 
     }
 }
