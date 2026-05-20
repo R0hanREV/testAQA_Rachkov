@@ -1,17 +1,29 @@
 package lesson_4;
 
+import java.util.SortedMap;
+
 public class Figure implements CalcParams {
     protected String borderColor;
     protected String spaceColor;
 
-
-    @Override
-    public void perimetr() {
-
+    public Figure(String borderColor, String spaceColor) {
+        this.borderColor = borderColor;
+        this.spaceColor = spaceColor;
     }
 
     @Override
-    public void area() {
+    public double perimetr() {
+return 0.0;
+    }
 
+    @Override
+    public double area() {
+return 0.0;
+    }
+    public void info(){
+        System.out.println("Периметр "+perimetr());
+        System.out.println("Площадь "+ area());
+        System.out.println("Цвет заливки "+spaceColor);
+        System.out.println("Цвет границы " +borderColor);
     }
 }

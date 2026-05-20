@@ -16,5 +16,8 @@ public class Main {
         }
         System.out.println("В миске осталось " + bowl1.getAmountOfFood() + " еды.");
 
+        Circle circle = new Circle("red", "black",17);
+        circle.info();
+
     }
 }
