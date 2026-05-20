@@ -1,5 +1,7 @@
 package lesson_4;
 
+import lesson_4.figure.Circle;
+
 public class Main {
     public static void main(String[] args) {
         Dog dog1 = new Dog("Bobik");

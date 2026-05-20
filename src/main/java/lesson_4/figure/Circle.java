@@ -1,4 +1,4 @@
-package lesson_4;
+package lesson_4.figure;
 
 public class Circle extends Figure {
     private int radius;

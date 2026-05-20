@@ -1,6 +1,4 @@
-package lesson_4;
-
-import java.util.SortedMap;
+package lesson_4.figure;
 
 public class Figure implements CalcParams {
     protected String borderColor;

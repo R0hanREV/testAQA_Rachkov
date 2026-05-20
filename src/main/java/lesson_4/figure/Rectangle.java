@@ -1,4 +1,4 @@
-package lesson_4;
+package lesson_4.figure;
 
 public class Rectangle extends Figure {
     private double height;

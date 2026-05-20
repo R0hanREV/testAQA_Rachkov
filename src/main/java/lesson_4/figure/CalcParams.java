@@ -1,4 +1,4 @@
-package lesson_4;
+package lesson_4.figure;
 
 public interface CalcParams {
      double perimetr();
