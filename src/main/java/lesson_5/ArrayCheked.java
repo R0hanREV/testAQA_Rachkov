@@ -1,10 +1,7 @@
 package lesson_5;
 
 import lesson_5.Exceptions.MyArrayDataException;
-import lesson_5.Exceptions.MyArrayIndexOutOfBoundsException;
 import lesson_5.Exceptions.MyArraySizeException;
-
-import java.util.SortedMap;
 
 public class ArrayCheked {
     static void compareArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
