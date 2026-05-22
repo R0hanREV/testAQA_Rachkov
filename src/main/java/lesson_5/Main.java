@@ -3,6 +3,8 @@ package lesson_5;
 import lesson_5.Exceptions.MyArrayDataException;
 import lesson_5.Exceptions.MyArraySizeException;
 
+import static lesson_5.ArrayCheked.catchArrayBound;
+
 public class Main {
     public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
         String array[][] = {{"1", "2", "3", "4"},
@@ -16,6 +18,6 @@ public class Main {
         } catch (MyArrayDataException e) {
             System.out.println();
         }
-
+        catchArrayBound();
     }
 }

@@ -1,6 +1,7 @@
 package lesson_5;
 
 import lesson_5.Exceptions.MyArrayDataException;
+import lesson_5.Exceptions.MyArrayIndexOutOfBoundsException;
 import lesson_5.Exceptions.MyArraySizeException;
 
 import java.util.SortedMap;
@@ -29,4 +30,16 @@ public class ArrayCheked {
         }
         System.out.println("Сумма всех значений в массиве " + sum);
     }
+
+    static void catchArrayBound() throws ArrayIndexOutOfBoundsException {
+        String[] array1 = new String[4];
+        System.out.println("Присваиваем значение \"А\" несуществующей ячейке массива");
+        try {
+            array1[4] = "A";
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Такой ячейки нет в массиве");
+        }
+        System.out.println("Программа продолжает работу после отлова исключения");
+    }
+
 }
