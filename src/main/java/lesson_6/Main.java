@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        Set<Student> students = new HashSet<>();
+        HashSet<Student> students = new HashSet<>();
         students.add(new Student("Иван Иванов", "А2", 2, Arrays.asList(4, 2, 4, 5, 3)));
         students.add(new Student("Петр Петров", "А2", 2, Arrays.asList(4, 2, 4, 5, 3)));
         students.add(new Student("Иван Сидоров", "B3", 3, Arrays.asList(3, 2, 1, 2, 3)));
@@ -20,7 +20,7 @@ public class Main {
         }
 
         StudentManage.printStudents(students, 2);
-         StudentManage.removeStudent(students);
+        StudentManage.removeStudent(students);
         StudentManage.promoteStudents(students);
         for (Student o : students) {
             System.out.println(o);
