@@ -23,7 +23,7 @@ import java.util.Set;
             }
         }
         if (!hasStudent) {
-            System.out.println("На " + course + " курсче нет студентов.");
+            System.out.println("На " + course + " курсе нет студентов.");
         }
     }
 }
