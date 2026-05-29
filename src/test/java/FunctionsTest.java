@@ -15,12 +15,6 @@ public class FunctionsTest {
         functions = new Functions();
     }
 
-    //    @DisplayName("Слово является палиндромом")
-//    @ParameterizedTest
-//    @ValueSource(strings = {"racecar", "radar", "able was I ere I saw elba"})
-//    public void isPalindromeTest(String word) {
-//        Assertions.assertTrue(functions.isPAlenfrom(word));
-//    }
     @Test
     @DisplayName("Поверка факториала 0")
     void testFactorialZero() {

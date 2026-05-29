@@ -4,13 +4,6 @@ import java.util.Locale;
 
 public class Functions {
 
-
-    //   public boolean isPAlenfrom(String str) {
-    //       String string = str.toLowerCase();
-    //       String revers = new StringBuilder(string).reverse().toString();
-    //       return string.equals(revers);
-    //   }
-
     public long factorialCalc(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Число не должно быть отрицательным");
