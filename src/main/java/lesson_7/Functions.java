@@ -24,4 +24,46 @@ public class Functions {
         }
         return result;
     }
+
+    public double calcTriangle(double a, double b, double c) {
+        if (a <= 0 || b <= 0 || c <= 0) {
+            throw new IllegalArgumentException("Стороны треуголника должны быть больше нуля");
+        }
+        if ((a + b <= c) || (a + c <= b) || (b + c <= a)) {
+            throw new IllegalArgumentException("Треугольник с такими сторонавми не существует");
+        }
+        double p = (a + b + c) / 2.0;
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+    }
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Деление на ноль невозможно");
+        }
+        return (double) a / b;
+    }
+
+    public String compare(int a, int b) {
+        if (a > b) {
+            return "больше";
+        }
+        if (a < b) {
+            return "меньше";
+        } else {
+            return "равно";
+        }
+    }
 }
+
