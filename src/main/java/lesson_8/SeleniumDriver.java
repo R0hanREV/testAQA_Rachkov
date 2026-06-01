@@ -20,6 +20,9 @@ public class SeleniumDriver {
 
 
     public static WebDriver getInstance() {
+if (Objects.isNull(driver.get())){
+    driver.set(new ChromeDriver(options));
+}
         return driver.get();
     }
 }

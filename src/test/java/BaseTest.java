@@ -10,7 +10,7 @@ public class BaseTest {
     public static void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximazed");
+        options.addArguments("--start-maximized");
         SeleniumDriver.setOptions(options);
     }
 
