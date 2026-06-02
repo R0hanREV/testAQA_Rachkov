@@ -86,4 +86,19 @@ public class PaySectionTest extends BaseTest {
         WebElement logo = driver.findElement(By.xpath("//section[@class='pay']//div[@class='pay__partners']//li[5]/img"));
         Assertions.assertEquals(logo.getAttribute("alt"), "Белкарт");
     }
+
+    public void checkButtonContinue() {
+        WebElement phone = driver.findElement(By.id("connection-phone"));
+        WebElement payment = driver.findElement(By.id("connection-sum"));
+        WebElement mail = driver.findElement(By.id("connection-email"));
+        WebElement buttonContinue = driver.findElement(By.xpath("//*[@id='pay-connection']/button"));
+        WebElement modelWindow = driver.findElement();
+
+        phone.sendKeys("297777777");
+        payment.sendKeys("100");
+        mail.sendKeys("qwerty@mail.ru");
+        buttonContinue.click();
+        Thread.sleep(5000);
+
+    }
 }
