@@ -76,4 +76,16 @@ public class ApiTest {
                 .body("data", equalTo("This is expected to be sent back as part of response body."));
     }
 
+    @Test
+    @DisplayName("Проверка DELETE запроса")
+    public void deleteRequest(){
+        given()
+                .contentType(ContentType.JSON)
+                .body("This is expected to be sent back as part of response body.")
+                .when()
+                .delete("https://postman-echo.com/delete")
+                .then()
+                .statusCode(200)
+                .body("data", equalTo("This is expected to be sent back as part of response body."));
+    }
 }
