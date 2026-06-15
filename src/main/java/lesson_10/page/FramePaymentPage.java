@@ -34,6 +34,21 @@ public class FramePaymentPage {
     @FindBy(xpath = "//iframe[@class='payment-widget-iframe']")
     private WebElement iFrameWindow;
 
+    @FindBy(xpath = "//div[@class='cards-brands ng-tns-c2312288139-2']//img[@src='assets/images/payment-icons/card-types/visa-system.svg']")
+    private WebElement logoVisa;
+
+    @FindBy(xpath = "//div[@class='cards-brands ng-tns-c2312288139-2']//img[@src='assets/images/payment-icons/card-types/mastercard-system.svg']")
+    private WebElement logoMasterCard;
+
+    @FindBy(xpath = "//div[@class='cards-brands ng-tns-c2312288139-2']//img[@src='assets/images/payment-icons/card-types/belkart-system.svg']")
+    private WebElement logoBelkart;
+
+    @FindBy(xpath = "//div[@class='cards-brands ng-tns-c2312288139-2']//img[@src='assets/images/payment-icons/card-types/maestro-system.svg']")
+    private WebElement logoMaestro;
+
+    @FindBy(xpath = "//div[@class='cards-brands ng-tns-c2312288139-2']//img[@src='assets/images/payment-icons/card-types/mir-system-ru.svg']")
+    private WebElement logoMir;
+
     public WebElement getHeaderSum() {
         return headerSum;
     }
@@ -62,11 +77,23 @@ public class FramePaymentPage {
         return cardNameField;
     }
 
-    public List<WebElement> getCardLogos() {
-        return cardLogos;
+    public WebElement getLogoVisa() {
+        return logoVisa;
     }
 
-    public WebElement getiFrameWindow() {
-        return iFrameWindow;
+    public WebElement getLogoMasterCard() {
+        return logoMasterCard;
+    }
+
+    public WebElement getLogoBelkart() {
+        return logoBelkart;
+    }
+
+    public WebElement getLogoMaestro() {
+        return logoMaestro;
+    }
+
+    public WebElement getLogoMir() {
+        return logoMir;
     }
 }

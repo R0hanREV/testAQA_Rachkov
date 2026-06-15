@@ -1,7 +1,6 @@
 package lesson_10.steps;
 
 import lesson_10.page.FramePaymentPage;
-import lesson_10.page.PaySectionPage;
 import lesson_8.SeleniumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -42,7 +41,23 @@ public class FramePaymentPageSteps {
         return framePaymentPage.getCardNameField().getText();
     }
 
-    public WebElement getIframe(){
-        return framePaymentPage.getiFrameWindow();
+    public boolean getSrcLogoVisa() {
+        return framePaymentPage.getLogoVisa().isDisplayed();
+    }
+
+    public boolean getSrcLogoMasterCard() {
+        return framePaymentPage.getLogoMasterCard().isDisplayed();
+    }
+
+    public boolean getSrcLogoMaestro() {
+        return framePaymentPage.getLogoMaestro().isDisplayed();
+    }
+
+    public WebElement getLogoBelkart() {
+        return framePaymentPage.getLogoBelkart();
+    }
+
+    public WebElement getLogoMir() {
+        return framePaymentPage.getLogoMir();
     }
 }

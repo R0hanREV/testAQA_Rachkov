@@ -54,16 +54,15 @@ public class PaySectionTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Проверка отображения элементов модального окна")
     public void checkButtonContinue() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         paySectionPageSteps.fillPhoneField("297777777");
         paySectionPageSteps.fillPaymentField("100");
         paySectionPageSteps.fillMailField("qwerty@mail.ru");
         paySectionPageSteps.clickButtonContinue();
-    //    Thread.sleep(10000);
-        //   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//app-root")));
-      //  Assertions.assertTrue(framePaymentPageSteps.getIframe().isDisplayed());
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[@class='payment-widget-iframe']")));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className("payment-widget-iframe")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("pay-description__cost")));
         Assertions.assertEquals("100.00 BYN",framePaymentPageSteps.getHeaderSum());
         Assertions.assertEquals("Номер карты",framePaymentPageSteps.getCardNumberField());
         Assertions.assertEquals("Срок действия",framePaymentPageSteps.getCardDurationField());
@@ -71,9 +70,15 @@ public class PaySectionTest extends BaseTest {
         Assertions.assertEquals("Имя и фамилия на карте",framePaymentPageSteps.getCardNameField());
         Assertions.assertEquals("Оплата: Услуги связи Номер:375297777777",framePaymentPageSteps.getHeaderPhonNumber());
         Assertions.assertEquals("Оплатить 100.00 BYN",framePaymentPageSteps.getButtonSum());
+        Assertions.assertTrue(framePaymentPageSteps.getSrcLogoVisa());
+        Assertions.assertTrue(framePaymentPageSteps.getSrcLogoMasterCard());
+        Assertions.assertTrue(framePaymentPageSteps.getSrcLogoMaestro());
+        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOf(framePaymentPageSteps.getLogoBelkart())).isDisplayed());
+        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOf(framePaymentPageSteps.getLogoMir())).isDisplayed());
     }
 
     @Test
+    @DisplayName("Проверка названий плейсходеров")
     public void checkPlaceholders() {
         Assertions.assertEquals("Номер телефона", paySectionPageSteps.placeholderPhoneField());
         Assertions.assertEquals("Сумма", paySectionPageSteps.placholderPaymentField());
