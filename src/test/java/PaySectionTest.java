@@ -40,7 +40,7 @@ public class PaySectionTest extends BaseTest {
     @Test
     @DisplayName("Проверка работы ссылки \"О сервисе\"")
     public void checkNewPageLinkService() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         paySectionPageSteps.clickLinkService();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("breadcrumbs")));
         String link = driver.getCurrentUrl();
@@ -57,7 +57,7 @@ public class PaySectionTest extends BaseTest {
     @Test
     @DisplayName("Проверка отображения элементов модального окна")
     public void checkButtonContinue() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         paySectionPageSteps.fillPhoneField("297777777");
         paySectionPageSteps.fillPaymentField("100");
         paySectionPageSteps.fillMailField("qwerty@mail.ru");
